@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Strings slightly darker (`#E37600`) for contrast; main text a touch lighter (`#455A64`).
+
 ## 0.2.1
 
 - Strings use Nest Theme's orange (`#FB8C00`) again; CSS classes and HTML attributes return to amber (`#A46000`).

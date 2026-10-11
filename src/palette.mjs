@@ -3,12 +3,12 @@
 
 export const palette = {
   syntax: {
-    fg: '#37474F',
+    fg: '#455A64',
     comment: '#72858F',
     keyword: '#8F59B3',
     function: '#5171A6',
     tag: '#4B71AE',
-    string: '#FB8C00',
+    string: '#E37600',
     type: '#D62750',
     constant: '#2C7896',
     attribute: '#587B15',
@@ -80,8 +80,8 @@ export const palette = {
 export const syntaxThresholds = {
   default: 4.5,
   comment: 3.5,
-  // Nest Theme's bright orange strings, kept at the author's request despite the low contrast.
-  string: 2.1,
+  // Nest Theme's orange strings, only slightly darkened at the author's request.
+  string: 2.8,
   operator: 3.5,
   special: 4.3,
 }

@@ -2,7 +2,7 @@
   "name": "darklight-theme",
   "displayName": "Darklight",
   "description": "A dark frame around a light editor: deep blue workbench, white editor, readable Material-inspired syntax.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publisher": "nstr",
   "author": "Nick Nesterov",
   "license": "MIT",
