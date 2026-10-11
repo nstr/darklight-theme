@@ -134,6 +134,12 @@ const tabs = {
   'tab.selectedBackground': ui.surface,
   'tab.selectedForeground': ui.fgStrong,
   'tab.selectedBorderTop': ui.accent,
+  // VS Code's Modern UI ("pill" tab style). The default "connected" style always paints
+  // the active tab with editor.background; see README for the user setting that overrides it.
+  'modernEditorTab.activeBackground': ui.surface,
+  'modernEditorTab.activeForeground': ui.fgStrong,
+  'modernEditorTab.hoverBackground': alpha(ui.surface, 0.6),
+  'modernEditorTab.hoverForeground': ui.fg,
   'breadcrumb.background': ui.surface,
   'breadcrumb.foreground': ui.fgMuted,
   'breadcrumb.focusForeground': ui.fg,

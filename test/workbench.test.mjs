@@ -31,6 +31,8 @@ test('tabs: dark strip, active tab one step lighter with accent on top', () => {
   assert.equal(colors['tab.unfocusedActiveBackground'], ui.surface)
   assert.equal(colors['tab.unfocusedActiveForeground'], ui.fg)
   assert.equal(colors['breadcrumb.background'], ui.surface)
+  assert.equal(colors['modernEditorTab.activeBackground'], ui.surface)
+  assert.equal(colors['modernEditorTab.activeForeground'], ui.fgStrong)
 })
 
 test('widgets that render code are light', () => {
