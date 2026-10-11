@@ -1,0 +1,13 @@
+{
+  "name": "darklight-sample",
+  "version": 1,
+  "enabled": true,
+  "nothing": null,
+  "nested": {
+    "level": 2,
+    "deeper": {
+      "level": 3,
+      "tags": ["a", "b"]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+diff --git a/src/card.ts b/src/card.ts
+index 1a2b3c4..5d6e7f8 100644
+--- a/src/card.ts
++++ b/src/card.ts
+@@ -1,4 +1,4 @@
+ export function title(id: number) {
+-  return 'User ' + id
++  return `User ${id}`
+ }
