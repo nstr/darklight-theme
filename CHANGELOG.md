@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- The Settings User/Workspace switch and Modern UI chips use a dark navy chip instead of grey.
+
 ## 0.1.1
 
 - Settings, Welcome and modal editors are fully light: all text fields are light everywhere, like the editor.

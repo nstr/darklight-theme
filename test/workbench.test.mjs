@@ -102,3 +102,9 @@ test('chips carry their own light background', () => {
 test('output panel uses the editor background for light syntax colors', () => {
   assert.equal(colors['outputView.background'], editor.bg)
 })
+
+test('modern UI tab chips read on white Settings and in the dark frame', () => {
+  assert.equal(colors['modernTab.activeBackground'], ui.surface)
+  assert.ok(contrast(colors['modernTab.activeForeground'], colors['modernTab.activeBackground']) >= 4.5)
+  assert.ok(contrast(colors['modernTab.activeBackground'], editor.bg) >= 3)
+})

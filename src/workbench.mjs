@@ -146,6 +146,10 @@ const tabs = {
   'modernEditorTab.activeForeground': ui.fgStrong,
   'modernEditorTab.hoverBackground': alpha(ui.surface, 0.6),
   'modernEditorTab.hoverForeground': ui.fg,
+  // Modern UI chips: the Settings "User/Workspace" switch (on white) and the composite bars (dark).
+  'modernTab.activeBackground': ui.surface,
+  'modernTab.activeForeground': ui.fgStrong,
+  'modernTab.hoverBackground': alpha(ui.fgShared, 0.18),
   'breadcrumb.background': ui.surface,
   'breadcrumb.foreground': ui.fgMuted,
   'breadcrumb.focusForeground': ui.fg,
