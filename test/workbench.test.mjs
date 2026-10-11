@@ -109,8 +109,7 @@ test('modern UI tab chips read on white Settings and in the dark frame', () => {
   assert.ok(contrast(colors['modernTab.activeBackground'], editor.bg) >= 3)
 })
 
-test('Modern UI card outlines are dark, not a light hairline', () => {
-  for (const key of ['surface.border', 'editor.border', 'widget.border']) {
-    assert.equal(colors[key].slice(0, 7), ui.black, key)
-  }
+test('Modern UI card outlines are opaque dark, so they stay dark over the white editor', () => {
+  for (const key of ['surface.border', 'editor.border']) assert.equal(colors[key], ui.bg, key)
+  assert.equal(colors['widget.border'].slice(0, 7), ui.black)
 })

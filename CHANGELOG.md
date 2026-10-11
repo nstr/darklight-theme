@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- Modern UI card outlines are opaque dark, so the white editor no longer gets a grey edge.
+
 ## 0.1.3
 
 - Modern UI card outlines use the dark frame border instead of a light hairline on rounded corners.

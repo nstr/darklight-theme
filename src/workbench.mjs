@@ -20,10 +20,11 @@ const frame = {
   focusBorder: alpha(ui.accent, 0.5),
   'selection.background': alpha(ui.accent, 0.35),
   'widget.shadow': shadow,
-  // Modern UI draws its rounded card outlines (editor, panels, side bar) with these.
+  // Modern UI draws its rounded card outlines (editor, panels, side bar) with these, on top of
+  // the card's own background. They must be opaque: a translucent black turns grey over white.
   'widget.border': border,
-  'surface.border': border,
-  'editor.border': border,
+  'surface.border': ui.bg,
+  'editor.border': ui.bg,
   'sash.hoverBorder': ui.accent,
   'progressBar.background': ui.accent,
   'textLink.foreground': ui.linkShared,
