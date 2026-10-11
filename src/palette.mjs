@@ -26,6 +26,9 @@ export const palette = {
     fg: '#A6ACCD',
     fgStrong: '#EEFFFF',
     fgMuted: '#8B93B9',
+    // Text VS Code draws both on the dark frame and on editor-area pages (Settings, Welcome).
+    fgShared: '#7E86AD',
+    linkShared: '#009098',
     accent: '#80CBC4',
     button: '#717CB4',
     black: '#000000',

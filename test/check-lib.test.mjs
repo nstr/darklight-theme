@@ -90,3 +90,8 @@ test('checkChromeContrast catches dim chrome text', () => {
   const dim = { ...palette, ui: { ...palette.ui, fgMuted: '#676E95' } }
   assert.ok(checkChromeContrast(dim).some((e) => e.includes('ui.fgMuted')))
 })
+
+test('checkChromeContrast catches shared text that fails on white', () => {
+  const pale = { ...palette, ui: { ...palette.ui, fgShared: '#A6ACCD' } }
+  assert.ok(checkChromeContrast(pale).some((e) => e.includes('ui.fgShared')))
+})

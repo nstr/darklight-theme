@@ -72,3 +72,33 @@ test('local Nest patches are carried over', () => {
     assert.ok(colors[key], key)
   }
 })
+
+test('text fields are light everywhere, like the editor', () => {
+  for (const key of ['input.background', 'settings.textInputBackground', 'settings.numberInputBackground', 'settings.dropdownBackground', 'settings.checkboxBackground']) {
+    assert.equal(colors[key], editor.widgetBg, key)
+  }
+  assert.ok(contrast(colors['input.foreground'], colors['input.background']) >= 4.5)
+  assert.ok(contrast(colors['settings.textInputForeground'], colors['settings.textInputBackground']) >= 4.5)
+})
+
+test('shared text reads on the white editor area and on the dark frame', () => {
+  for (const key of ['foreground', 'descriptionForeground', 'textLink.foreground']) {
+    assert.ok(contrast(colors[key], editor.bg) >= 3.5, `${key} on editor`)
+    assert.ok(contrast(colors[key], ui.bg) >= 4.2, `${key} on frame`)
+  }
+  assert.ok(contrast(colors['settings.headerForeground'], editor.bg) >= 4.5)
+})
+
+test('chips carry their own light background', () => {
+  for (const [fg, bg] of [
+    ['textPreformat.foreground', 'textPreformat.background'],
+    ['keybindingLabel.foreground', 'keybindingLabel.background'],
+    ['badge.foreground', 'badge.background'],
+  ]) {
+    assert.ok(contrast(colors[fg], colors[bg]) >= 4.5, `${fg} on ${bg}`)
+  }
+})
+
+test('output panel uses the editor background for light syntax colors', () => {
+  assert.equal(colors['outputView.background'], editor.bg)
+})

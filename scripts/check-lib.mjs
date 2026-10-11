@@ -101,6 +101,8 @@ export function checkHighlightContrast(theme, palette) {
 }
 
 const CHROME_MIN = 4.5
+const SHARED_ON_EDITOR_MIN = 3.5
+const SHARED_ON_FRAME_MIN = 4.2
 
 export function checkChromeContrast(palette) {
   const errors = []
@@ -108,6 +110,13 @@ export function checkChromeContrast(palette) {
     for (const bg of ['bg', 'surface']) {
       const ratio = contrast(palette.ui[text], palette.ui[bg])
       if (ratio < CHROME_MIN) errors.push(`ui.${text} on ui.${bg} = ${fmt(ratio)} < ${CHROME_MIN}`)
+    }
+  }
+  // Shared text appears on both the white editor area and the dark frame.
+  for (const text of ['fgShared', 'linkShared']) {
+    for (const [bg, min] of [[palette.editor.bg, SHARED_ON_EDITOR_MIN], [palette.ui.bg, SHARED_ON_FRAME_MIN]]) {
+      const ratio = contrast(palette.ui[text], bg)
+      if (ratio < min) errors.push(`ui.${text} on ${bg} = ${fmt(ratio)} < ${min}`)
     }
   }
   return errors

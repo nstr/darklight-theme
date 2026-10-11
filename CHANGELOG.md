@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+- Settings, Welcome and modal editors are fully light: all text fields are light everywhere, like the editor.
+- Shared text, descriptions and links use mid tones that read on both the white editor area and the dark frame.
+- Inline code, quotes, code blocks, keybinding labels and badges carry their own light chip.
+- The Output panel uses the editor background, since it is colored with the light syntax palette.
+
 ## 0.1.0
 
 First preview of Darklight, rebuilt from Nest Theme 1.0.40.
