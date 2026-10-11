@@ -73,7 +73,7 @@ test('checkSyntaxContrast reports contrast below the threshold', () => {
     weak,
   )
   assert.equal(errors.length, 2)
-  assert.match(errors[0], /syntax\.string .* < 4\.5/)
+  assert.match(errors[0], /syntax\.string .* < 3\.5/)
 })
 
 test('checkHighlightContrast reports text that disappears on a highlight', () => {

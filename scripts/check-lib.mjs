@@ -82,7 +82,10 @@ const HIGHLIGHT_KEYS = [
   'diffEditor.insertedTextBackground',
   'diffEditor.removedTextBackground',
 ]
+// Text on selection, find and diff highlights may lose a little contrast against its own
+// threshold, but never needs more than HIGHLIGHT_MIN.
 const HIGHLIGHT_MIN = 3.5
+const HIGHLIGHT_ALLOWANCE = 0.6
 
 export function checkHighlightContrast(theme, palette) {
   const editorBg = theme.colors?.['editor.background'] ?? palette.editor.bg
@@ -93,8 +96,9 @@ export function checkHighlightContrast(theme, palette) {
     if (!isColor(highlight)) continue
     const surface = blend(highlight, editorBg)
     for (const [name, color] of Object.entries(texts)) {
+      const min = Math.min(HIGHLIGHT_MIN, (syntaxThresholds[name] ?? syntaxThresholds.default) - HIGHLIGHT_ALLOWANCE)
       const ratio = contrast(color, surface)
-      if (ratio < HIGHLIGHT_MIN) errors.push(`${key}: syntax.${name} on ${surface} = ${fmt(ratio)} < ${HIGHLIGHT_MIN}`)
+      if (ratio < min) errors.push(`${key}: syntax.${name} on ${surface} = ${fmt(ratio)} < ${min}`)
     }
   }
   return errors

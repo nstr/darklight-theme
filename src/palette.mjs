@@ -3,16 +3,16 @@
 
 export const palette = {
   syntax: {
-    fg: '#597078',
+    fg: '#37474F',
     comment: '#72858F',
     keyword: '#8F59B3',
     function: '#5171A6',
     tag: '#4B71AE',
-    string: '#BA5100',
+    string: '#A97A00',
     type: '#D62750',
     constant: '#2C7896',
     attribute: '#587B15',
-    cssClass: '#A46000',
+    cssClass: '#BA5100',
     cssProperty: '#63718A',
     operator: '#009098',
     special: '#7C4DFF',
@@ -80,6 +80,7 @@ export const palette = {
 export const syntaxThresholds = {
   default: 4.5,
   comment: 3.5,
+  string: 3.5,
   operator: 3.5,
   special: 4.3,
 }

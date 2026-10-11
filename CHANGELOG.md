@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+- Darker main text (`#37474F`) and golden strings (`#A97A00`), closer to Nest Theme.
+- CSS classes, HTML attributes and Markdown link targets take the former string orange (`#BA5100`).
+
 ## 0.1.4
 
 - Modern UI card outlines are opaque dark, so the white editor no longer gets a grey edge.
