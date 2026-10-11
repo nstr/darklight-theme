@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Modern UI card outlines use the dark frame border instead of a light hairline on rounded corners.
+
 ## 0.1.2
 
 - The Settings User/Workspace switch and Modern UI chips use a dark navy chip instead of grey.

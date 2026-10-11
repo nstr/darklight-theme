@@ -20,7 +20,10 @@ const frame = {
   focusBorder: alpha(ui.accent, 0.5),
   'selection.background': alpha(ui.accent, 0.35),
   'widget.shadow': shadow,
-  'widget.border': borderLight,
+  // Modern UI draws its rounded card outlines (editor, panels, side bar) with these.
+  'widget.border': border,
+  'surface.border': border,
+  'editor.border': border,
   'sash.hoverBorder': ui.accent,
   'progressBar.background': ui.accent,
   'textLink.foreground': ui.linkShared,
