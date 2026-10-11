@@ -17,9 +17,15 @@ Darklight is the successor of [Nest Theme](https://marketplace.visualstudio.com/
 
 Search for **Darklight** in the Extensions view, then pick it with **Preferences: Color Theme**.
 
-## Dark active tab in VS Code's Modern UI
+## Recommended: classic UI
 
-Recent VS Code versions enable a Modern UI where the active tab is "connected" to the editor and always uses the editor background, so it turns white and themes cannot change it. To keep the active tab dark, add this to your user settings:
+Recent VS Code versions enable an experimental Modern UI that draws the editor as a rounded card and always paints the card, and the active "connected" tab, with the editor background. With a white editor inside a dark frame this shows as a white active tab and thin light arcs at the card's top corners, which a theme cannot change. Darklight looks as designed with the classic UI:
+
+```json
+"workbench.experimental.modernUI": false
+```
+
+If you keep the Modern UI, this setting makes the active tab dark (the corner arcs remain):
 
 ```json
 "workbench.colorCustomizations": {
@@ -29,8 +35,6 @@ Recent VS Code versions enable a Modern UI where the active tab is "connected" t
   }
 }
 ```
-
-The "pill" tab style (`"workbench.experimental.modernUIEditorTabStyle": "pill"`) and the classic UI (`"workbench.experimental.modernUI": false`) use the theme colors without extra settings.
 
 ## Development
 

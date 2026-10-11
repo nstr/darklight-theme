@@ -226,6 +226,8 @@ darklight-theme/
 - **Output.** Панель Output получает `editor.bg`: её текст раскрашен светлой палитрой подсветки.
 - **Активная вкладка.** В Modern UI VS Code со стилем вкладок «connected» активная вкладка всегда окрашена в `editor.background`. Тёмная вкладка требует пользовательской настройки `workbench.colorCustomizations["[Darklight]"]["tab.activeBackground"]`, она описана в README.
 
+- **Классический интерфейс.** В Modern UI внутренний слой карточки редактора скруглён на 8px внутри рамки 1px. В верхних углах просвечивает белый фон карточки (`editor.background`), и тема не может это изменить. Рекомендуемая настройка: `"workbench.experimental.modernUI": false`. Она описана в README.
+
 Исходный план раздела:
 
 Settings, Keybindings, страница расширения, Welcome и предпросмотр Markdown рисуются на `editor.bg`, но берут общие ключи (`foreground`, `descriptionForeground`, `input.*`, `textLink.*`). Нужные значения устанавливаются при обкатке (раздел 8, шаг 3). Отправная точка — правки из установленной Nest: поля Settings на `ui.input` с текстом `ui.fgStrong`. Найденные проблемы чинятся в рамках этой работы. Принятые значения записываются в `workbench.mjs`, группа «Редакторы без кода».
