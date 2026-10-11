@@ -1,0 +1,10 @@
+src/**
+scripts/**
+samples/**
+test/**
+docs/**
+.vscode/**
+node_modules/**
+icon.svg
+.gitignore
+**/*.vsix
