@@ -55,6 +55,7 @@ export const tokenColors = [
     'variable.language',
     'meta.decorator',
     'punctuation.decorator',
+    'meta.decorator variable.other.readwrite',
   ], s.function),
 
   rule('Types and classes', [
@@ -67,7 +68,8 @@ export const tokenColors = [
   ], s.type),
 
   rule('Strings', ['string', 'punctuation.definition.string', 'constant.other.symbol'], s.string),
-  rule('Regular expressions', ['string.regexp'], s.special),
+  rule('Regular expressions', ['string.regexp', 'string.regexp keyword.other'], s.special),
+  rule('Regular expression anchors', ['string.regexp keyword.control.anchor'], s.operator),
 
   rule('Numbers and constants', [
     'constant',

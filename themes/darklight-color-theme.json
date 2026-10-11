@@ -616,7 +616,8 @@
         "keyword.other.special-method",
         "variable.language",
         "meta.decorator",
-        "punctuation.decorator"
+        "punctuation.decorator",
+        "meta.decorator variable.other.readwrite"
       ],
       "settings": {
         "foreground": "#5171A6"
@@ -650,10 +651,20 @@
     {
       "name": "Regular expressions",
       "scope": [
-        "string.regexp"
+        "string.regexp",
+        "string.regexp keyword.other"
       ],
       "settings": {
         "foreground": "#7C4DFF"
+      }
+    },
+    {
+      "name": "Regular expression anchors",
+      "scope": [
+        "string.regexp keyword.control.anchor"
+      ],
+      "settings": {
+        "foreground": "#009098"
       }
     },
     {
