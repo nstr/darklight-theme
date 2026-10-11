@@ -58,7 +58,7 @@ test('checkCoverage lists missing and empty required keys', () => {
 
 test('checkSyntaxContrast rejects colors outside the syntax palette', () => {
   const errors = checkSyntaxContrast(
-    theme({ tokenColors: [{ scope: ['string'], settings: { foreground: '#FB8C00' } }] }),
+    theme({ tokenColors: [{ scope: ['string'], settings: { foreground: '#FFD54F' } }] }),
     palette,
   )
   assert.equal(errors.length, 1)
@@ -67,13 +67,13 @@ test('checkSyntaxContrast rejects colors outside the syntax palette', () => {
 })
 
 test('checkSyntaxContrast reports contrast below the threshold', () => {
-  const weak = { ...palette, syntax: { ...palette.syntax, string: '#FB8C00' } }
+  const weak = { ...palette, syntax: { ...palette.syntax, type: '#FFD54F' } }
   const errors = checkSyntaxContrast(
-    theme({ tokenColors: [{ scope: ['string'], settings: { foreground: '#FB8C00' } }] }),
+    theme({ tokenColors: [{ scope: ['entity.name.type'], settings: { foreground: '#FFD54F' } }], semanticTokenColors: {} }),
     weak,
   )
   assert.equal(errors.length, 2)
-  assert.match(errors[0], /syntax\.string .* < 3\.5/)
+  assert.match(errors[0], /syntax\.type .* < 4\.5/)
 })
 
 test('checkHighlightContrast reports text that disappears on a highlight', () => {

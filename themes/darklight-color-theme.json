@@ -327,7 +327,7 @@
     "editor.inlineValuesBackground": "#FFB62C26",
     "debugTokenExpression.name": "#8F59B3",
     "debugTokenExpression.value": "#37474F",
-    "debugTokenExpression.string": "#A97A00",
+    "debugTokenExpression.string": "#FB8C00",
     "debugTokenExpression.number": "#2C7896",
     "debugTokenExpression.boolean": "#2C7896",
     "debugTokenExpression.error": "#D72929",
@@ -659,7 +659,7 @@
         "constant.other.symbol"
       ],
       "settings": {
-        "foreground": "#A97A00"
+        "foreground": "#FB8C00"
       }
     },
     {
@@ -745,7 +745,7 @@
         "entity.other.attribute-name.pseudo-element"
       ],
       "settings": {
-        "foreground": "#BA5100"
+        "foreground": "#A46000"
       }
     },
     {
@@ -871,7 +871,7 @@
         "constant.other.reference.link.markdown"
       ],
       "settings": {
-        "foreground": "#BA5100"
+        "foreground": "#A46000"
       }
     },
     {

@@ -8,11 +8,11 @@ export const palette = {
     keyword: '#8F59B3',
     function: '#5171A6',
     tag: '#4B71AE',
-    string: '#A97A00',
+    string: '#FB8C00',
     type: '#D62750',
     constant: '#2C7896',
     attribute: '#587B15',
-    cssClass: '#BA5100',
+    cssClass: '#A46000',
     cssProperty: '#63718A',
     operator: '#009098',
     special: '#7C4DFF',
@@ -80,7 +80,8 @@ export const palette = {
 export const syntaxThresholds = {
   default: 4.5,
   comment: 3.5,
-  string: 3.5,
+  // Nest Theme's bright orange strings, kept at the author's request despite the low contrast.
+  string: 2.1,
   operator: 3.5,
   special: 4.3,
 }
